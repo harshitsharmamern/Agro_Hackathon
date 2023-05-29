@@ -33,7 +33,6 @@ router.post('/signup',async(req,res)=>{
 
 router.get('/home_data',async(req,res)=>{
     
-    
       const data =  await user_schema.find()
       res.json({details:data})
      
