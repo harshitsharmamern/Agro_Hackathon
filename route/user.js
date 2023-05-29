@@ -22,7 +22,7 @@ router.post('/signup',async(req,res)=>{
      if(!phone_exist){
 
       const data =  await user_schema.create(req.body)
-      res.json(data)
+      res.json({details:data})
       console.log(data);
      }
      else{
@@ -31,7 +31,13 @@ router.post('/signup',async(req,res)=>{
      }
 })
 
-
+router.get('/home_data',async(req,res)=>{
+    
+    
+      const data =  await user_schema.find()
+      res.json({details:data})
+     
+})
 
 
 module.exports = router

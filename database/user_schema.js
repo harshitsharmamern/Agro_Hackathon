@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { boolean } = require("webidl-conversions");
 
 const database1 = mongoose.Schema({
-   Name: {
+   name: {
     type: String,
   },
   
