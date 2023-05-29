@@ -25,7 +25,7 @@ const Home = () => {
     geeting_data()
   },[])
 
-console.log(stu_details.details[0]);
+// console.log(stu_details.details[0]);
 
   return (
     <div>
@@ -34,14 +34,16 @@ console.log(stu_details.details[0]);
        <div className='container'>
            <div>welcome</div>
 <div style={{backgroundColor:'red'}}>
+
 {
-  stu_details.details.map((val)=>{
-    return (<>
-       <div>{val.name}</div>
-       <div>{val.phone}</div>
-    </>)
-  })
-}
+            stu_details.details && stu_details.details.map((val) => (
+              <>
+                <div>{val.name}</div>
+                <div>{val.phone}</div>
+              </>
+            ))
+          }
+
 </div>
 
 <Front/>
